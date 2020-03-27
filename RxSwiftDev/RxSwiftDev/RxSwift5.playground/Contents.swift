@@ -46,3 +46,37 @@ func calculateStatistis(scores: [Int]) -> (min: Int, max: Int, sum:Int) {
 
 let stats = calculateStatistis(scores: [5,3,100,3,9])
 print("Sum: \(stats.sum), Max: \(stats.max) Min: \(stats.min)")
+
+
+/*
+Test 3
+No argument label ("_" for no argument label and use string (ex: "on" day) to show custom argument label)
+*/
+
+func greet(_ person: String, on day: String) -> String {
+    return "Hello \(person), today is \(day)."
+}
+
+print(greet("Milan", on: "Friday"))
+
+
+/*
+Test 4
+Nested functions
+*/
+
+func calculate() -> Int {
+    var y = 10
+    func add(){
+        y += 5
+        let x = 10
+        func addMore(){
+            y += x
+        }
+        addMore()
+    }
+    add()
+    return y
+}
+print("Calculated value: \(calculate())")
+
